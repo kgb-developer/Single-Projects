@@ -1,0 +1,213 @@
+@import 'base';
+
+@font-face {
+    font-family: BentonSans;
+    font-weight: normal;
+    src: url('http://a.espncdn.com/design_mockups/fantasyLandingPage/assets/fonts/BentonSans/BentonSansRegular.woff') format('woff'), url('http://a.espncdn.com/design_mockups/fantasyLandingPage/assets/fonts/BentonSans/BentonSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: BentonSansBold;
+    src: url('http://a.espncdn.com/design_mockups/fantasyLandingPage/assets/fonts/BentonSans/BentonSansBold.woff') format('woff'), url('http://a.espncdn.com/design_mockups/fantasyLandingPage/assets/fonts/BentonSans/BentonSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PlayoffBold;
+    src: url('../assets/fonts/PlayoffSansPro-Bold.otf') format('opentype');
+}
+
+html,
+body {
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+.insiderApp {
+    background: $color-gray-01;
+    font-family: $font-family;
+    position: relative;
+    height: 100%;
+}
+
+.insiderApp__content-wrap {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+
+    @include respond-to(screen-xs) {
+        padding: 0 20px;
+    }
+}
+
+// --------------------------------------------------
+// PATTERNS
+// --------------------------------------------------
+
+.h1 {
+    color: $color-white;
+    font-family: $font-family-secondary;
+    font-size: 62px;
+
+    @include respond-to(screen-md) {
+        font-size: 42px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 26px;
+    }
+}
+
+.h2 {
+    color: $color-black;
+    font-family: $font-family-secondary;
+    font-size: 50px;
+
+    @include respond-to(screen-md) {
+        font-size: 40px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 24px;
+    }
+}
+
+.p {
+    color: $color-gray-02;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 10px 0 0;
+
+    @include respond-to(screen-md) {
+        font-size: 16px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 14px;
+    }
+}
+
+.ul {
+    padding: 10px 0 0;
+
+    .li {
+        color: $color-white;
+        font-size: 18px;
+        line-height: 2;
+        padding-left: 25px;
+        position: relative;
+
+        @include respond-to(screen-lte-md) {
+            font-size: 14px;
+        }
+
+        @include respond-to(screen-xs) {
+            padding-left: 15px;
+        }
+
+        &:before {
+            background: $color-white;
+            border-radius: 50%;
+            content: '';
+            height: 6px;
+            left: 0;
+            position: absolute;
+            top: 15px;
+            width: 6px;
+
+            @include respond-to(screen-lte-md) {
+                top: 12px;
+            }
+        }
+    }
+}
+
+.insiderApp__link {
+    color: $color-gray-03;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.headline-insider {
+    &:before {
+        background: url('../assets/imgs/logo-insiderbug@2x.png') no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 60px;
+        margin: 0 auto 15px;
+        width: 60px;
+
+        @include respond-to(screen-sm) {
+            height: 48px;
+            width: 48px;
+        }
+
+        @include respond-to(screen-xs) {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+
+.insiderApp__button,
+.insiderApp__button-alt {
+    @include transition(all, 0.2s, ease);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 18px;
+    height: 70px;
+    line-height: 71px;
+    width: 230px;
+    text-align: center;
+
+    @include respond-to(screen-lte-md) {
+        height: 44px;
+        line-height: 45px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 14px;
+        height: 38px;
+        line-height: 39px;
+        width: 170px;
+    }
+
+    @include respond-to(screen-xs) {
+        width: 126px;
+    }
+}
+
+.insiderApp__button {
+    background: $color-white;
+    border: 1px solid transparent;
+    color: $color-orange;
+
+    &:hover {
+        background: transparent;
+        border: 1px solid $color-white;
+        color: $color-white;
+    }
+}
+
+.insiderApp__button-alt {
+    background: transparent;
+    border: 1px solid $color-white;
+    color: $color-white;
+
+    &:hover {
+        background: $color-white;
+        border-color: $color-white;
+        color: $color-orange;
+    }
+}
+
+// ------------------------------------------------
+// Modules
+// ------------------------------------------------
+
+@import 'modules/all';

@@ -1,0 +1,774 @@
+
+@font-face {
+    font-family: BentonSans;
+    src: url('../fonts/BentonSans/BentonSansRegular.woff') format('woff'), url('../fonts/BentonSans/BentonSansRegular.ttf') format('truetype');
+}
+
+html, body, main {
+	height: 100%;
+}
+
+body {
+	background: #f4f4f4;
+	color: #000000;
+	font-family: 'BentonSans', helvetica, arial, sans-serif;
+}
+
+.espnShop__header {
+	background-color: #000000;
+	height: 44px;
+	position: relative;
+}
+
+.espnShop__header__logo {
+	background: url('http://www.espn.com/i/eticket/iditarod/images/espn_logo-2x.png') no-repeat;
+	background-size: 79px 21px;
+	border: 0;
+	color: transparent;
+	font: 0/0 a;
+	height: 21px;
+	left: 50%;
+	position: absolute;
+	text-shadow: none;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	top: 50%;
+	width: 79px;
+}
+
+.espnShop__header__social {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	top: 50%;
+	right: 0;
+}
+
+.espnShop__header__social_actions {
+	background: url('http://www.espn.com/prod/styles/pagetype/otl/20150212_barkley/images/social-icons-redesign3.png') no-repeat;
+	float: left;
+	list-style: none;
+	height: 25px;
+	margin: 0 15px 0 0;
+	opacity: .8;
+	overflow: hidden;
+	width: 25px;
+}
+
+.espnShop__header__social_actions:hover {
+	opacity: 1;
+}
+
+.espnShop__header__social_actions > a {
+	border: 0;
+	color: transparent;
+	display: block;
+	font: 0/0 a;
+	height: 100%;
+	text-shadow: none;
+	width: 100%;
+}
+
+.espnShop__header__social__fb {
+	background-position: -5px -5px;
+}
+
+.espnShop__header__social__twitter {
+	background-position: -47px -5px;
+}
+
+.espnShop__header__social__email {
+	background-position: -130px -5px;
+}
+
+.espnShop__wrapper {
+	background: url('../img/desktop-background-global.png') no-repeat;
+	background-position: center top;
+	background-size: contain;
+	display: block;
+	width: 100%;
+}
+
+.espnShop__title {
+	color: #ffffff;
+	font-weight: 400;
+	margin: 0;
+	padding: 60px 0 50px;
+	text-align: center;
+	width: 100%;
+}
+
+.espnShop__title > a {
+	background: url('../img/logo-espnShop.png');
+	background-size: 297px 44px;
+	border: 0;
+	color: transparent;
+	display: block;
+	font: 0/0 a;
+	height: 44px;
+	margin: 0 auto;
+	text-shadow: none;
+	width: 297px;
+}
+
+.espnShop__title > span {
+	display: block;
+	font-size: 32px;
+	padding: 0 12px;
+}
+
+.espnShop__title > a + span {
+	margin-top: 36px;
+}
+
+.espnShop__content {
+	display: block;
+	margin: 0 auto;
+	width: 1010px;
+}
+
+.espnShop__link {
+	background-color: #3366cc;
+	border-radius: 6px;
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 12px 0;
+	transition: background-color 200ms linear;
+	-webkit-transition: background-color 200ms linear;
+	text-align: center;
+	text-decoration: none;
+	width: 270px;
+}
+
+.espnShop__link:hover {
+	background-color: #007aff;
+	cursor: pointer;
+}
+
+.espnShop__sub-title {
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+.espnShop__content p {
+	font-size: 18px;
+}
+
+.espnShop__insider {
+	background: #ffffff; 
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 36%, #ffffff 72%, #e9e9e9 100%); 
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 36%,#ffffff 72%,#e9e9e9 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 36%,#ffffff 72%,#e9e9e9 100%); 
+	border-top: 6px solid #ff841f;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	padding: 40px 58px 50px;
+}
+
+.espnShop__insider-img--desktop {
+	display: block;
+	height: 273px;
+	margin: 25px 0;
+	width: 456px;
+}
+
+.espnShop__insider-content {
+	width: 376px;
+}
+
+.espnShop__insider .espnShop__sub-title  {
+	margin: 0 0 20px;
+}
+
+.espnShop__insider .espnShop__sub-title > img {
+	display: inline-block;
+	height: 47px;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+	width: 159px;
+}
+
+.espnShop__insider-list {
+	font-size: 14px;
+	line-height: 1.4;
+	list-style: none;
+	padding: 0;
+}
+
+.espnShop__insider-list > li {
+	margin-bottom: 15px;
+}
+
+.espnShop__insider-list > li:before {
+	background: #000000;
+	border-radius: 50%;
+	content: '';
+	display: inline-block;
+	height: 4px;
+	margin: -4px 4px 0 0;
+	width: 4px;
+	vertical-align: middle;
+}
+
+.espnShop__insider-list + .espnShop__link {
+	margin-top: 40px;
+}
+
+.espnShop__insider-list > li.has-img {
+	position: relative;
+}
+
+.espnShop__insider-list > li.has-img > span {
+	display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.espnShop__insider-list > li.has-img .espnShop__insider-img--mobile {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.espnShop__fantasy {
+	background: #ffffff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	padding: 40px 20px 0 60px;
+}
+
+.espnShop__fantasy-content h2 {
+	margin-bottom: -10px;
+}
+
+.espnShop__fantasy-content > p {
+	position: relative;
+	width: 300px;
+}
+
+.espnShop__fantasy-img--desktop {
+	height: 354px;
+	width: 528px;
+}
+
+.espnShop__fantasy-img--mobile,
+.espnShop__insider-img--mobile {
+	display: none;
+}
+
+.espnShop__fantasy__gift-cards {
+	display: block;
+	margin: 30px 0 0;
+}
+
+.espnShop__fantasy__gift-cards .espnShop__sub-title {
+	margin: 0 0 15px;
+}
+
+.espnShop__fantasy__gift-cards img {
+	width: 76px;
+}
+
+.espnShop__fantasy__gift-cards img,
+.espnShop__fantasy__gift-cards p {
+	float: left;
+}
+
+.espnShop__fantasy__gift-cards img + p {
+	margin-left: 15px;
+}
+
+.espnShop__fantasy__gift-cards p {
+	font-size: 16px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	width: 220px;
+}
+
+.espnShop__link--content {
+	color: #3366cc;
+	display: block;
+	text-decoration: none;
+}
+
+.espnShop__link--content:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.espnShop__espnApp {
+	align-items: center;
+	-webkit-align-items: center;
+	background: url('../img/desktop-background-espnApp.png') no-repeat;
+	background-size: contain;
+	color: #ffffff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	height: 387px;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	padding: 0 50px;
+	position: relative;
+	width: 100%;
+}
+
+.espnShop__espnApp-content p {
+	width: 320px;
+}
+
+.espnShop__espnApp_title,
+.espnShop__fantasyApp_title {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+
+.espnShop__espnApp_title > img + h2,
+.espnShop__fantasyApp_title > img + h2 {
+	line-height: 1.4;
+	margin-left: 20px;
+}
+
+.espnShop__espnApp_title > img {
+	height: 81px;
+	width: 81px;
+}
+
+.espnShop__espnApp_title span,
+.espnShop__fantasyApp_title span {
+	display: block;
+}
+
+.espnShop__espnApp-content > h2 {
+	vertical-align: middle;
+}
+
+.espnShop__espnApp_text {
+	display: block;
+	width: 100%;
+}
+
+.espnShop__downloads {
+	text-align: right;
+}
+
+.espnShop__downloads__row {
+	display: block;
+}
+
+.espnShop__downloads__row + .espnShop__downloads__row {
+	margin-top: 15px;
+}
+
+.espnShop__downloads__row a:last-child {
+	margin-left: 10px;
+}
+
+.espnShop__downloads__links {
+	border: 0;
+	color: transparent;
+	display: inline-block;
+	font: 0/0 a;
+	height: 65px;
+	text-shadow: none;
+	width: 220px;
+	vertical-align: middle;
+}
+
+.espnShop__downloads__links.apple {
+	background: url('../img/download-appStore.png') no-repeat;
+	background-size: 220px 65px;
+}
+
+.espnShop__downloads__links.google {
+	background: url('../img/download-google.png') no-repeat;
+	background-size: 220px 65px;
+}
+
+.espnShop__downloads__links.microsoft {
+	background: url('../img/download-microsoft.png') no-repeat;
+	background-size: 220px 65px;
+}
+
+.espnShop__downloads__links.amazon {
+	background: url('../img/download-amazon.png') no-repeat;
+	background-size: 220px 65px;
+}
+
+.espnShop__fantasyApp {
+	background: #ffffff; 
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 66%, #ffffff 72%, #e9e9e9 100%); 
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 66%,#ffffff 72%,#e9e9e9 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 66%,#ffffff 72%,#e9e9e9 100%); 
+	height: 360px;
+	position: relative;
+}
+
+.espnShop__fantasyApp-img--desktop {
+	bottom: 0;
+	height: 382px;
+	left: 50px;
+	position: absolute;
+	width: 340px;
+}
+
+.espnShop__fantasyApp-content {
+	position: absolute;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	top: 50%;
+	right: 50px;
+	width: 515px;
+}
+
+.espnShop__fantasyApp_title + p {
+	width: 380px;
+}
+
+footer {
+	color: #888888;
+	font-size: 11px;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1023px) {
+	.espnShop__header__social {
+		display: none;
+	}
+
+	.espnShop__wrapper {
+		background: url('../img/tablet-background-global.png') no-repeat;
+		background-position: center top;
+		background-size: contain;
+	}
+
+	.espnShop__title {
+		padding: 50px 0 40px;
+	}
+
+	.espnShop__title > a {
+		background-size: 239px 35px;
+		height: 35px;
+		width: 239px;
+	}
+
+	.espnShop__title > span {
+		font-size: 22px;
+	}
+
+	.espnShop__title > a + span {
+		margin-top: 20px;
+	}
+
+	.espnShop__content {
+		width: 688px;
+	}
+
+	.espnShop__sub-title {
+		font-size: 25px;
+	}
+
+	.espnShop__content p {
+		font-size: 14px;
+	}
+
+	.espnShop__insider {
+		padding: 20px;
+	}
+
+	.espnShop__insider-img--desktop {
+		height: 179px;
+		width: 300px;
+	}
+
+	.espnShop__insider-content {
+		margin-left: 20px;
+	}
+
+	.espnShop__insider .espnShop__sub-title  {
+		margin: 0 0 -5px;
+	}
+
+	.espnShop__insider .espnShop__sub-title > img {
+		height: 34px;
+		width: 114px;
+	}
+
+	.espnShop__insider-list {
+		font-size: 13px;
+	}
+
+	.espnShop__insider-list + .espnShop__link {
+		margin-top: 20px;
+	}
+
+	.espnShop__fantasy {
+		align-items: flex-end;
+		-webkit-align-items: flex-end;
+		padding: 30px 40px 0;
+	}
+
+	.espnShop__fantasyApp {
+		height: 285px;
+	}
+
+	.espnShop__fantasy-content {
+		margin-bottom: 30px;
+	}
+
+	.espnShop__fantasy-img--desktop {
+		height: 215px;
+		width: 332px;
+	}
+
+	.espnShop__fantasy__gift-cards {
+		margin: 15px 0 0;
+	}
+
+	.espnShop__fantasy__gift-cards p {
+		font-size: 14px;
+		width: 180px;
+	}
+
+	.espnShop__espnApp {
+		height: 265px;
+		padding: 0 30px;
+	}
+
+	.espnShop__espnApp-content p {
+		width: 260px;
+	}
+
+	.espnShop__espnApp_title > img {
+		height: 61px;
+		width: 61px;
+	}
+
+	.espnShop__espnApp_title > img + h2,
+	.espnShop__fantasyApp_title > img + h2 {
+		line-height: 1.2;
+	}
+
+		.espnShop__downloads__row {
+		width: 320px;
+	}
+
+	.espnShop__downloads__links {
+		height: 45px;
+		width: 152px;
+	}
+	
+	.espnShop__downloads__links.apple {
+		background: url('../img/download-appStore.png') no-repeat;
+		background-size: 152px 45px;
+	}
+
+	.espnShop__downloads__links.google {
+		background: url('../img/download-google.png') no-repeat;
+		background-size: 152px 45px;
+	}
+
+	.espnShop__downloads__links.microsoft {
+		background: url('../img/download-microsoft.png') no-repeat;
+		background-size: 152px 45px;
+	}
+
+	.espnShop__downloads__links.amazon {
+		background: url('../img/download-amazon.png') no-repeat;
+		background-size: 152px 45px;
+	}
+
+	.espnShop__fantasyApp-img--desktop {
+		height: 306px;
+		left: 30px;
+		width: 269px;
+	}
+
+	.espnShop__fantasyApp-content {
+		right: 30px;
+		width: 320px;
+	}
+
+	.espnShop__fantasyApp_title + p {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.espnShop__content {
+	    width: 100%;
+	}
+
+	.espnShop__title {
+	    padding: 30px 0 30px;
+	}
+
+	.espnShop__title > a {
+	    background-size: 180px 27px;
+	    height: 27px;
+	    width: 180px;
+	}
+
+	.espnShop__title > span {
+	    font-size: 18px;
+	}	
+
+	.espnShop__wrapper {
+	    background: url(../img/mobile-background-global.png) no-repeat;
+	    background-position: center top;
+	    background-size: contain;
+	}
+
+	.espnShop__insider,
+	.espnShop__fantasy {
+	    padding: 30px 25px;
+	}
+
+	.espnShop__espnApp {
+		padding: 50px 25px;
+	}
+
+	.espnShop__insider-img--desktop,
+	.espnShop__fantasy-img--desktop,
+	.espnShop__fantasyApp-img--desktop {
+		display: none;
+	}
+
+	.espnShop__insider-content {
+	    margin-left: 0;
+	    width: 100%;
+	}
+
+	.espnShop__link,
+	.espnShop__fantasy-content,
+	.espnShop__fantasy-content > p,
+	.espnShop__downloads__row,
+	.espnShop__espnApp-content p {
+		width: 100%;
+	}
+
+	.espnShop__fantasy-content {
+		margin: 0;
+	}
+
+	.espnShop__espnApp {
+		align-items: initial;
+		-webkit-align-items: initial;
+		background: url(../img/mobile-background-espnApp.png) no-repeat;
+		background-size: cover;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		height: auto;
+	}
+
+	.espnShop__downloads {
+	    text-align: left;
+	}
+
+	.espnShop__fantasyApp-content {
+		padding: 0 25px;
+		right: auto;
+		width: 100%;
+	}
+
+	.espnShop__fantasyApp {
+		height: 285px;
+	}
+
+	.espnShop__fantasyApp_title + p {
+		width: auto;
+	}
+
+	.espnShop__espnApp_title > img + h2, .espnShop__fantasyApp_title > img + h2 {
+		margin-left: 10px;
+	}
+
+	.show-hide {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		margin: 20px 0 12px;
+	}
+
+	.espnShop__fantasy-img--mobile,
+	.espnShop__insider-img--mobile {
+		display: block;
+	}
+
+	.espnShop__insider-list > li {
+		margin: 0;
+		padding-bottom: 20px;
+	}
+
+	.espnShop__insider-list + .espnShop__link {
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.espnShop__downloads__row {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+	}
+
+	.espnShop__downloads__links {
+		height: 40px;
+		width: 132px;
+	}
+
+	.espnShop__downloads__links.apple {
+		background: url('../img/download-appStore.png') no-repeat;
+		background-size: 132px 40px;
+	}
+
+	.espnShop__downloads__links.google {
+		background: url('../img/download-google.png') no-repeat;
+		background-size: 132px 40px;
+	}
+
+	.espnShop__downloads__links.microsoft {
+		background: url('../img/download-microsoft.png') no-repeat;
+		background-size: 132px 40px;
+	}
+
+	.espnShop__downloads__links.amazon {
+		background: url('../img/download-amazon.png') no-repeat;
+		background-size: 132px 40px;
+	}
+}

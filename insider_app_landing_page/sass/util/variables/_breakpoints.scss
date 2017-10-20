@@ -1,0 +1,67 @@
+// ---------------------------------------
+// Core Breakpoints
+// ---------------------------------------
+
+$screen-lg:     1260px !default;
+$screen-lg-min: $screen-lg;
+
+$screen-md:     1024px !default;
+$screen-md-min: $screen-md !default;
+$screen-md-max: ( $screen-lg - 1 ) !default;
+
+$screen-sm:     768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-sm-max: ( $screen-md - 1 ) !default;
+
+$screen-xs:     1px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-xs-max: ( $screen-sm - 1 ) !default;
+
+
+// ---------------------------------------
+// Core Breakpoints
+// ---------------------------------------
+
+$screen-lg-breakpoint: 'screen and (min-width: ' + $screen-lg-min + ')';
+$screen-md-breakpoint: 'screen and (min-width: ' + $screen-md-min + ') and (max-width: ' + $screen-md-max + ')';
+$screen-sm-breakpoint: 'screen and (min-width: ' + $screen-sm-min + ') and (max-width: ' + $screen-sm-max + ')';
+$screen-xs-breakpoint: 'screen and (max-width: ' + $screen-xs-max + ')';
+
+
+// ---------------------------------------
+// Combined Breakpoints
+// ---------------------------------------
+
+// Everything Between Desktop and Large Desktop (sm, md)
+$screen-sm-md-breakpoint: 'screen and (min-width: ' + $screen-sm + ') and (max-width: ' + $screen-md-max + ')';
+
+
+// ---------------------------------------
+// Less Than or Equal To Breakpoints
+// ---------------------------------------
+
+// Everything Less Than or Equal to Desktop (0 - 1099)
+$screen-lte-1099: 'screen and (min-width: ' + $screen-xs + ') and (max-width: 1099px)';
+
+// Everything Less Than or Equal to Desktop (0 - 1259)
+$screen-lte-md-breakpoint: 'screen and (min-width: ' + $screen-xs + ') and (max-width: ' + $screen-md-max + ')';
+
+// Everything Less Than or Equal to Tablet (0 - 1023)
+$screen-lte-sm-breakpoint: 'screen and (min-width: ' + $screen-xs + ') and (max-width: ' + $screen-sm-max + ')';
+
+
+// ---------------------------------------
+// Greater Than or Equal To Breakpoints
+// ---------------------------------------
+
+// Everything Greater Than or Equal to Mobile (414px+)
+$screen-gte-414-breakpoint: 'screen and (min-width: 414px)';
+
+// Everything Greater Than or Equal to Tablet (768+)
+$screen-gte-sm-breakpoint: 'screen and (min-width: ' + $screen-sm-min + ')';
+
+// Everything Greater Than or Equal to Desktop (1024+)
+$screen-gte-md-breakpoint: 'screen and (min-width: ' + $screen-md-min + ')';
+
+// Everything Greater Than or Equal to Desktop (1100px+)
+$screen-gte-1100: 'screen and (min-width: 1100px)';

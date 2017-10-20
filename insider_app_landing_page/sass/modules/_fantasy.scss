@@ -1,0 +1,86 @@
+// --------------------------------------------------
+// Fantasy
+// --------------------------------------------------
+
+.insiderApp__fantasy {
+    background: url('../assets/imgs/bg-fantasyanalysis@2x.png') no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+    @include respond-to(screen-md) {
+        height: 449px;
+    }
+
+    @include respond-to(screen-sm) {
+        height: 319px;
+    }
+
+    @include respond-to(screen-xs) {
+        background: url('../assets/imgs/bg-fantasyanalysis-375@2x.png') no-repeat;
+        background-size: cover;
+        height: 415px;
+        padding-top: 60px;
+    }
+
+    .insiderApp__content-wrap {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(space-between);
+        position: initial;
+
+        @include respond-to(screen-xs) {
+            @include align-items(flex-start);
+            @include flex-direction(column);
+            @include justify-content(flex-start);
+        }
+    }
+}
+
+.insiderApp__fantasy__content {
+    padding-right: 40px;
+    width: 50%;
+
+    @include respond-to(screen-xs) {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .h2,
+    .p {
+        color: $color-white;
+    }
+}
+
+.insiderApp__fantasy__img {
+    background: url('../assets/imgs/image-fantasyanalysis@2x.png') no-repeat right;
+    background-size: contain;
+    height: 689px;
+    margin-top: -45px;
+    position: absolute;
+    right: 0;
+    transform-origin: right;
+    width: 710px;
+
+    @include respond-to(screen-md) {
+        @include scale(0.75);
+        margin-top: -34px;
+    }
+
+    @include respond-to(screen-sm) {
+        @include scale(0.55);
+        margin-top: -30px;
+    }
+
+    @include respond-to(screen-xs) {
+        background: url('../assets/imgs/image-fantasyanalysis-375@2x.png') no-repeat bottom;
+        background-size: contain;
+        bottom: 0;
+        height: 245px;
+        left: 0;
+        margin: 0;
+        right: auto;
+        width: 100%;
+    }
+}

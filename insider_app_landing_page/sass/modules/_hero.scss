@@ -1,0 +1,156 @@
+// --------------------------------------------------
+// HERO
+// --------------------------------------------------
+
+.insiderApp__hero {
+    background: url('../assets/imgs/bg-welcome@2x.png') no-repeat;
+    background-size: cover;
+
+    @include respond-to(screen-xs) {
+        background: url('../assets/imgs/bg-welcome-375@2x.png') no-repeat;
+        background-size: cover;
+    }
+
+    p {
+        color: $color-white;
+        font-size: 36px;
+        line-height: 1.6;
+        padding: 0 0 40px;
+
+        @include respond-to(screen-lg) {
+            font-size: 32px;
+        }
+
+        @include respond-to(screen-md) {
+            font-size: 24px;
+        }
+
+        @include respond-to(screen-sm) {
+            font-size: 16px;
+        }
+
+        @include respond-to(screen-xs) {
+            font-size: 14px;
+            padding: 10px 0 0;
+        }
+    }
+
+    .insiderApp__button-alt {
+        height: 60px;
+        line-height: 61px;
+
+        @include respond-to(screen-lte-md) {
+            height: 44px;
+            line-height: 45px;
+        }
+
+        @include respond-to(screen-xs) {
+            height: 34px;
+            line-height: 35px;
+        }
+    }
+
+    .insiderApp__button {
+        @include respond-to(screen-xs) {
+            display: none;
+        }
+    }
+}
+
+.insiderApp__hero__header {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(space-between);
+    border-bottom: 1px solid $color-white;
+    padding: 20px 0;
+
+    @include respond-to(screen-xs) {
+        border-bottom: 0;
+
+        .insiderApp__button-alt {
+            background: $color-white;
+            border-color: $color-white;
+            color: $color-orange;
+
+            &:hover {
+                background: transparent;
+                border-color: $color-white;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.insiderApp__hero__logo {
+    height: 40px;
+    width: 139px;
+
+    @include respond-to(screen-lte-sm) {
+        height: 32px;
+        width: 112px;
+    }
+
+    @include respond-to(screen-xs) {
+        height: 24px;
+        width: 83px;
+    }
+}
+
+.insiderApp__hero__content {
+    @include flexbox();
+    @include justify-content(space-between);
+    height: 100%;
+    position: relative;
+
+    @include respond-to(screen-xs) {
+        @include flex-direction(column);
+        padding: 10px 0 0;
+    }
+}
+
+.insiderApp__hero__content-wrap {
+    @include align-self(center);
+    max-width: 60%;
+    padding-right: 40px;
+
+    @include respond-to(screen-xs) {
+        max-width: none;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.insiderApp__hero__phone {
+    @include align-self(flex-end);
+    @include flex(1 0 auto);
+    background: url('../assets/imgs/image-welcome-1440-1280@2x.png') no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    height: 438px;
+    margin: 40px 0 0 0;
+    width: 397px;
+
+    @include respond-to(screen-md) {
+        background: url('../assets/imgs/image-welcome-1080@2x.png') no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        height: 325px;
+        margin: 20px 0 0 0;
+        width: 397px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        background: url('../assets/imgs/image-welcome-1440-1280@2x.png') no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        height: 278px;
+        margin: 20px 0 0 0;
+        width: 252px;
+    }
+
+    @include respond-to(screen-xs) {
+        @include align-self(center);
+        background-position: bottom;
+        margin: 25px 0 0 0;
+    }
+}

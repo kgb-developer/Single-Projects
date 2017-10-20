@@ -1,0 +1,260 @@
+// --------------------------------------------------
+// Information
+// What is Insider?
+// What are you waiting for?
+// --------------------------------------------------
+
+.insiderApp__information {
+    background: $color-gray-01;
+    padding: 60px 0;
+    text-align: center; 
+
+    @include respond-to(screen-lte-sm) {
+        padding: 50px 0;
+    }
+
+    .p {
+        width: 64%;
+
+        @include respond-to(screen-md) {
+            width: 80%;
+        }
+
+        @include respond-to(screen-lte-sm) {
+            width: 100%;
+        }
+    }
+
+    .insiderApp__button {
+        background: $color-orange;
+        border: 1px solid transparent;
+        color: $color-white;
+        width: 100%;
+
+        &:hover {
+            background: transparent;
+            border: 1px solid $color-orange;
+            color: $color-orange;
+        }
+    }
+}
+
+.insiderApp__information--single {
+    background: $color-white;
+    
+    .insiderApp__button {
+        width: 480px;
+        margin-top: 30px;
+
+        @include respond-to(screen-lte-sm) {
+            width: 245px;
+        }
+    }
+}
+
+.insiderApp__information__boxes {
+    @include flexbox();
+    @include justify-content(center);
+    padding-top: 60px;
+
+    @include respond-to(screen-sm) {
+        padding-top: 40px;
+    }
+
+    @include respond-to(screen-xs) {
+        padding-top: 30px;
+    }
+}
+
+.insiderApp__information__box {
+    background: $color-white;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #cccccc;
+    display: inline-block;
+    padding: 40px 20px 20px;
+    position: relative;
+    width: 50%;
+
+    + .insiderApp__information__box {
+        margin-left: 24px; 
+    }
+
+    @include respond-to(screen-lte-sm) {
+        padding-top: 20px;
+    }
+
+    @include respond-to(screen-xs) {
+        padding: 20px 10px 10px;
+    }
+}
+
+.insiderApp__information__box--has-ribbon {
+    &:before {
+        background: $color-orange-dark;
+        content: '';
+        height: 6px;
+        left: 101px;
+        position: absolute;
+        top: -6px;
+        width: 6px;
+
+        @include respond-to(screen-md) {
+            left: 77px;
+        }
+
+        @include respond-to(screen-sm) {
+            left: 55px;
+        }
+
+        @include respond-to(screen-xs) {
+            height: 5px;
+            left: 33px;
+            top: -5px;
+        }
+    }
+
+    &:after {
+        background: $color-orange-dark;
+        content: '';
+        height: 7px;
+        left: -7px;
+        position: absolute;
+        top: 101px;
+        width: 7px;
+
+        @include respond-to(screen-md) {
+            top: 77px;
+        }
+
+        @include respond-to(screen-sm) {
+            top: 55px;
+        }
+
+        @include respond-to(screen-xs) {
+            top: 33px;
+        }
+    }
+}
+
+.insiderApp__information__box__price {
+    color: $color-orange;
+    font-family: $font-family-secondary;
+    font-size: 50px;
+    letter-spacing: 3px;
+
+    @include respond-to(screen-md) {
+        font-size: 40px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 24px;
+    }
+
+    span {
+        color: #cccccc;
+        font-size: 30px;
+
+        @include respond-to(screen-md) {
+            font-size: 20px;
+        }
+
+        @include respond-to(screen-lte-sm) {
+            font-size: 12px;
+        }
+    }
+}
+
+.insiderApp__information__box__title {
+    color: #555555;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding: 10px 0;
+    text-transform: uppercase;
+
+    @include respond-to(screen-md) {
+        font-size: 24px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+}
+
+.insiderApp__information__box__title__hide {
+    display: inline-block;
+    
+    @include respond-to(screen-xs) {
+        display: none;
+    }
+}
+
+.insiderApp__information__box__snippet {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 40px 20px;
+
+    @include respond-to(screen-md) {
+        font-size: 16px;
+        padding: 0 0 20px;
+    }
+
+    @include respond-to(screen-lte-sm) {
+        font-size: 14px;
+        padding: 0 0 15px;
+    }
+}
+
+.insiderApp__information__box__ribbon {
+    @include rotate(45deg);
+    background: transparent;
+    height: 195px;
+    left: -22px;
+    overflow: hidden;
+    position: absolute;
+    top: -69px;
+    width: 78px;
+    z-index: 1;
+
+    @include respond-to(screen-md) {
+        transform: rotate(45deg) scale(0.8);
+        left: -28px;
+        top: -76px;
+    }
+
+    @include respond-to(screen-sm) {
+        transform: rotate(45deg) scale(0.6);
+        left: -32px;
+        top: -83px;
+    }
+
+    @include respond-to(screen-xs) {
+        transform: rotate(45deg) scale(0.4);
+        left: -37px;
+        top: -89px;
+    }
+}
+
+.insiderApp__information__box__ribbon__wrap {
+    @include rotate(45deg);
+    background: #FD7927;
+    border-bottom-left-radius: 10px;
+    display: block;
+    height: 128px;
+    left: 24px; 
+    position: relative;
+    top: 26px;
+    width: 128px;
+}
+
+.insiderApp__information__box__ribbon__text {
+    @include rotate(-135deg);
+    color: $color-white;
+    font-size: 22px;
+    left: 12px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 72px;
+}

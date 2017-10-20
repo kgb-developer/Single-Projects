@@ -1,0 +1,120 @@
+// --------------------------------------------------
+// HEADER
+// --------------------------------------------------
+
+.insiderApp__header {
+    background: $color-black;
+    height: 50px;
+    width: 100%;
+}
+
+.insiderApp__header__logo {
+    @include translateXY(-50%, -50%);
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 82px;
+
+    @include respond-to(screen-lte-sm) {
+        @include translateXY(40px, -50%);
+        height: 14px;
+        left: 0;
+        width: 58px;
+
+        @include respond-to(screen-xs) {
+            @include translateXY(20px, -50%);
+        }
+    }
+}
+
+.insiderApp__header__link {
+    @include translateY(-50%);
+    @include transition(color, 0.2s, ease);
+    color: $color-white;
+    font-size: 16px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+
+    &:hover {
+        color: $color-orange;
+    }
+
+    @include respond-to(screen-sm) {
+        font-size: 14px;
+    }
+
+    @include respond-to(screen-xs) {
+        font-size: 10px;
+        right: 20px;
+    }
+}
+
+// --------------------------------------------------
+// SUB HEADER
+// --------------------------------------------------
+
+.insiderApp__subHeader {
+    @include translateY(-100%);
+    @include transition(all, 0.3s, ease);
+    background: $color-white;
+    box-shadow: 0 3px 3px -2px #cccccc;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    position: fixed;
+    opacity: 1;
+    width: 100%;
+    z-index: 10;
+
+    &.fadeIn {
+        @include translateY(0);
+        opacity: 1;
+    }
+
+    .insiderApp__content-wrap {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(space-between);
+    }
+
+    .insiderApp__button {
+        background: $color-orange;
+        border-color: $color-orange;
+        color: $color-white;
+        height: 60px;
+        line-height: 61px;
+
+        &:hover {
+            background: transparent;
+            border-color: $color-orange;
+            color: $color-orange;
+        }
+
+        @include respond-to(screen-lte-md) {
+            height: 44px;
+            line-height: 45px;
+        }
+
+        @include respond-to(screen-xs) {
+            height: 34px;
+            line-height: 35px;
+        }
+    }
+}
+
+.insiderApp__subHeader__logo {
+    height: 40px;
+    width: 139px;
+
+    @include respond-to(screen-sm) {
+        height: 32px;
+        width: 112px;
+    }
+
+    @include respond-to(screen-xs) {
+        height: 24px;
+        width: 83px;
+    }
+}

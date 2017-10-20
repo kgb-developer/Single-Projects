@@ -1,0 +1,64 @@
+// --------------------------------------------------
+// Exclusive
+// --------------------------------------------------
+
+.insiderApp__exclusive {
+    background: url('../assets/imgs/bg-exclusivecontent@2x.png') no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+
+    @include respond-to(screen-lte-sm) {
+        padding: 50px 0;
+    }
+
+    @include respond-to(screen-xs) {
+        background: url('../assets/imgs/bg-exclusivecontent-375@2x.png') no-repeat;
+        background-size: cover;
+    }
+
+    .insiderApp__content-wrap {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(space-between);
+
+        @include respond-to(screen-xs) {
+            @include flex-direction(column);
+            @include justify-content(center);
+        }
+    }
+}
+
+.insiderApp__exclusive__content {
+    padding-left: 60px;
+
+    @include respond-to(screen-xs) {
+        @include order(1);
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.insiderApp__exclusive__img {   
+    @include flex(1 0 auto);
+    background: url('../assets/imgs/image-exclusivecontent@2x.png') no-repeat;
+    background-size: contain;
+    height: 448px;
+    width: 562px;
+
+    @include respond-to(screen-md) {
+        height: 248px;
+        width: 310px;
+    }
+
+    @include respond-to(screen-sm) {
+        height: 226px;
+        width: 281px;
+    }
+
+    @include respond-to(screen-xs) {
+        @include order(2);
+        height: 224px;
+        margin-top: 30px;
+        width: 281px;
+    }
+}
