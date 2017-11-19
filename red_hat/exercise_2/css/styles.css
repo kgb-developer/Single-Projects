@@ -1,0 +1,202 @@
+@font-face {
+    font-family: OverpassBold;
+    font-weight: normal;
+    src: url('../fonts/overpass-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: Overpass;
+    font-weight: normal;
+    src: url('../fonts/overpass-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: OverpassLight;
+    font-weight: normal;
+    src: url('../fonts/overpass-light.woff') format('woff');
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    background: #bbbbbb;
+    color: #2a3136;
+    font-family: Overpass, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    position: relative;
+}
+
+.container:before {
+    background: radial-gradient(ellipse at center, #ededed 0%,#bbbbbb 50%,#bbbbbb 100%); 
+    content: '';
+    height: 50%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container:after {
+    background: linear-gradient(to bottom, #bbbbbb 0%,#ededed 100%);
+    content: '';
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-position {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-position--centered {
+    justify-content: flex-start;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #cecece;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    position: relative;
+    transition: width 0.3s ease;
+    width: 100%;
+    z-index: 1;
+}
+
+/********************************************
+    CARD HEADER
+********************************************/
+
+.card__header {
+    background: linear-gradient(to bottom, #c00000 0%,#470000 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__logo {
+    color: #ffffff;
+    padding: 15px;
+}
+
+.card__nav,
+.card__nav__list {
+    display: flex;
+}
+
+.card__nav {
+    overflow: hidden;
+}
+
+.card__nav__list { 
+    align-items: center;
+}
+
+.card__nav__list__item {
+    color: #d7aaaf;
+    transition: color 0.3s ease;
+}
+
+.card__nav__list__item:hover,
+.card__nav__list__item--active {
+    color: #ffffff;
+}
+
+.card__nav__list__item:hover .card__nav__list__item__link,
+.card__nav__list__item--active .card__nav__list__item__link {
+    box-shadow: inset 0px 0px 30px 5px rgba(100,0,0,1);
+}
+
+.card__nav__list__item__link {
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+/********************************************
+    CARD SECTION
+********************************************/
+
+.card__section {
+    padding: 15px;
+}
+
+.card__detail__list {
+    padding: 15px 0;
+}
+
+.card__detail__list__item {
+    display: flex;
+    padding: 0 0 20px;
+}
+
+.card__detail__list__item:last-child {
+    padding: 0;
+}
+
+.card__detail__list__item__title {
+    flex: none;
+    width: 100px;
+}
+
+.card__detail__list__item__desc {
+    color: #777777;
+    font-family: OverpassLight, Helvetica, Arial, sans-serif;
+}
+
+/********************************************
+    UTILITY/PATTERNS
+********************************************/
+
+.card__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card__h1 {
+    font-family: OverpassBold, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    padding: 15px 0 5px;
+}
+
+.card__p {
+    line-height: 1.6;
+    padding: 15px 0;
+}
+
+.card__highlight {
+    background: #ccc;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 3px 6px;
+}
+
+.card__highlight--active {
+    background: #008100;
+}
+
+/********************************************
+    BPs
+********************************************/
+
+@media (min-width: 768px) { 
+    .container-position--centered {
+        justify-content: center;
+    }
+
+    .card {
+        width: 50%;
+    }
+
+    .card__detail__list__item__title {
+        width: 150px;
+    }
+}

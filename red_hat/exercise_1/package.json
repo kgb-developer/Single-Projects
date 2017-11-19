@@ -1,0 +1,13 @@
+{
+  "name": "exercise_1",
+  "version": "1.0.0",
+  "description": "Exercise 1",
+  "main": "exercise_1.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "kgb-developer"
+}
