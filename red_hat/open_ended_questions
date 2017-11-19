@@ -1,0 +1,52 @@
+
+Open Ended Questions
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+Could you outline what you would consider to be the important considerations if you were asked to develop a web application that could potentially be used by thousands of users?
+
+- Choosing your app framework would be the logical first step to consider, based on complexity as well as package management and unit testing
+
+- UI Considerations (forms, alerts, error handling, grids, pattern library or make your own, media, etc.) as well as choosing a CSS Preprocessor. This is where you would also consider your browsers (prefixes, resets, etc.), useful libraries (if you absolutely need them while making sure they don’t have a TON of dependencies weighing your project down) and minifying your CSS and JS
+
+- Version Control (branching, merging, etc.)
+
+- Throughout the entire lifecycle you should be considering performance
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+What techniques do you employ to keep up-to-date with the rapid pace of progress in the field frontend development? How do you choose which technologies are worth taking the time to learn more about? 
+
+- My favorite technique is to dive into video tutorials where the tutor is actually running through processes with you instead of just speaking to you. I learn best by taking advantage of hands-on-activities. I usually use YouTube, Lynda and/or CodeSchool but also keep up to date on what Developers like Chris Coyier are talking about on their websites (CSS-Tricks).
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+Describe the approach you take in testing your applications. 
+
+- I usually test throughout the entire lifecycle, section by section. For example, I’ll focus in on one module, completely finish it, test it (performance, browser testing, asset sizing, etc.) and then I will move onto the next module. This way, your not waiting until the very END of the project build and avoid feeling a mess and overwhelmed. Throughout the years, I have realized that my OCD while coding is actually a good thing and that my parents were correct in saying, “Do it right the first time or don’t do it at all!” :)
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+What do you value in a code base? 
+
+- Priding myself on being a clean coder, I’d have to say what I value most is cleanliness. A developer should be able to run through your code base and understand what’s happening at least on a fundamental level and jump right in. If cleanliness is not important to you, your going to run into more problems in the future!
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+What do you find most exciting or interesting about working in the software development field? 
+
+- Some may disagree but I love the fact our field is ALWAYS changing which makes development fun and challenging. Another aspect I find exciting is that we create products, etc. that millions of people use on a regular basis. For example, I lead all of the Front-end for the web game cast projects at ESPN. I created the new interactive basketball courts, football fields, baseball fields and will most likely be creating an interactive ice hockey rink. Our game packages are viewed by millions of people who literally watch the games live through my game casts on any device. Pretty neat!
+
+- - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - 
+
+In your career to date, what are you most proud of and why? 
+
+- Not to get sappy but I am super proud of my growth since graduating college. After graduation I landed a job at a local agency in Lancaster, PA and it turned out to be the worst job I have ever had due to the owner who was extremely demeaning towards all of the employees to the point of slamming doors, temper tantrums, spitting, cursing, etc. I had zero confidence in anything and everything I did and was pretty beaten down. My successful career at ESPN was a direct result of me realizing I did not have to be treated the way I was treated in my previous job and I was actually worth something! Since working for ESPN, my confidence and growth has sky-rocketed and a large part of that is due to working with others who lift you up and the huge support system of our mid-leadership teams.
+
+- Alright, no more sappy stories… I am also super proud of my work with all of the game cast, game package projects mentioned above as well as being a part of the official redesign of espn.com. I was also the direct reason why our team has been moved into the Technology Department this year. We were under “Product” and did not have access to certain opportunities that back end developers had. In fact, we were (and still are) considered “designers” to the back end developers - which is a huge problem and another reason why I’m looking for a new challenge.
