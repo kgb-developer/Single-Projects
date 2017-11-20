@@ -1,0 +1,98 @@
+body {
+    background: #ededed;
+    color: #888888;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+h1, 
+h2 {
+    margin: 15px 0;
+}
+
+.Users {
+    background: #ffffff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Users thead tr {
+    border-bottom: 2px solid #246a8f;
+}
+
+.Users th {
+    color: #1d1e1f;
+}
+
+.Users tbody tr {
+    border-bottom: 1px solid #ededed;
+}
+
+.Users th,
+.Users td {
+    padding: 15px;
+    text-align: left;
+}
+
+.Users__Row__Link {
+    color: #246a8f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Users__Row__Link:hover {
+    color: #4aa0ce;
+}
+
+.User__Profile {
+    background: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 15px;
+    width: 400px;
+}
+
+.User__Profile .Users__Row {
+    margin: 0;
+    padding: 0;
+}
+
+.User__Profile .Users__Row > li {
+    list-style: none;
+    padding: 15px;
+}
+
+.User__Profile__Title {
+    color: #246a8f;
+    display: block;
+    font-weight: bold;
+}
+
+.User__Profile__Header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.User__Profile__Bookmark {
+    background: #246a8f;
+    border-radius: 4px;
+    color: #ffffff;
+    display: block;
+    font-size: 10px;
+    padding: 8px 12px;
+    position: relative;
+    text-align: center;
+}
+
+.User__Profile__Link {
+    color: #246a8f;
+    display: block;
+    font-size: 14px;
+    padding: 15px 0 0;
+}
