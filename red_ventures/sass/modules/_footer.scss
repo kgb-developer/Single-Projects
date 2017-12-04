@@ -1,0 +1,113 @@
+// --------------------------------------------------
+// Footer
+// --------------------------------------------------
+
+.footer__top,
+.footer__social {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(center);
+}
+
+.footer__top {
+    @include flex-direction(column);
+    background: $clr-blue-01;
+    padding: 30px 10px;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__social {
+    color: $clr-white;
+    font-family: $font-family-bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer__social__list {
+    @include flexbox();
+    margin-left: 30px;
+    margin-top: -2px;
+}
+
+.footer__social__list__item__link {
+    font-size: 0;
+    padding: 0 12px;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &--twitter:before {
+        background: url('../assets/imgs/twitter-icon.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 18px;
+        width: 22px;
+    }
+
+    &--fb:before {
+        background: url('../assets/imgs/facebook-icon.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 23px;
+        width: 12px;
+    }
+
+    &--youtube:before {
+        background: url('../assets/imgs/youtube-icon.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 25px;
+        width: 21px;
+    }
+}
+
+.footer__sub {
+    background: $clr-blue-02;
+    padding: 10px 20px;
+}
+
+.footer__sub__list {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(center);
+
+    &:first-child {
+        display: none;
+
+        @include respond-to(screen-xs) {
+            @include flexbox();
+            border-bottom: 1px solid $clr-white;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.footer__sub__list__item + .footer__sub__list__item {
+    margin-left: 12px;
+    padding-left: 12px;
+    position: relative;
+
+    &:before {
+        @include translateY(-50%);
+        background: $clr-white;
+        content: '';
+        height: 60%;
+        left: 0;
+        position: absolute;
+        top: 60%;
+        width: 1px;
+    }
+}
+
+.footer__sub__list__item__link {
+    color: $clr-white;
+    font-family: $font-family;
+    font-size: 12px;
+}

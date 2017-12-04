@@ -1,0 +1,274 @@
+// --------------------------------------------------
+// Header
+// --------------------------------------------------
+
+.header {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 4;
+}
+
+.header__sub {
+    background: $clr-blue-01;
+    height: 42px;
+
+    @include respond-to(screen-xs) {
+        display: none;
+    }
+    
+    .link:hover {
+        color: $clr-grey-01;
+    }
+}
+
+.header__sub__nav,
+.header__sub__nav__list {
+    height: 100%;
+}
+
+.header__sub__nav__list {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(flex-end);
+}
+
+.header__sub__nav__list__item {
+    color: $clr-white;
+    font-size: 12px;
+
+    + .header__sub__nav__list__item {
+        margin-left: 40px;
+    }
+}
+
+.header__main {
+    background: $clr-white;
+    height: 100px;
+
+    @include respond-to(screen-xs) {
+        height: 56px;
+    }
+
+    .wrapper {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(space-between);
+        height: 100%;
+
+        @include respond-to(screen-sm) {
+            @include align-items(flex-start);
+            @include flex-direction(column);
+            @include justify-content(center);
+        }
+    }
+} 
+
+.header__logo {
+    background: url('../assets/imgs/pool-pros-logo.png') no-repeat;
+    background-size: cover;
+    height: 32px;
+    margin-right: 24px;
+    text-indent: -9999px;
+    width: 231px;
+
+    @include respond-to(screen-xs) {
+        height: 22px;
+        margin-right: 24px;
+        width: 158px;
+    }
+}
+
+.header__nav,
+.header__nav__list {
+    @include align-items(center);
+    @include flexbox();
+
+    @include respond-to(screen-sm) {
+        @include align-items(flex-end);
+        width: 100%; 
+    }
+}
+
+.header__nav__list + .header__nav__button {
+    margin-left: 85px;
+    
+    @include respond-to(screen-xs) {
+        margin: 0;
+    }
+}
+
+.header__nav {
+    @include respond-to(screen-xs) {
+        @include flex(1 0 auto);
+        @include justify-content(space-between);
+    }
+}
+
+.header__nav__button {
+    @include respond-to(screen-xs) {
+        border-width: 2px;
+        font-size: 12px;
+        padding: 8px 8px 6px;
+        text-transform: uppercase;
+
+        &:before {
+            font-size: 18px;
+            padding-right: 2px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+.header__nav__button--mobile {
+    display: none;
+
+    @include respond-to(screen-xs) {
+        @include flexbox();
+        @include justify-content(center);
+        background: $clr-white;
+        border: 0;
+        border-radius: 50%;
+        box-shadow: 0px 2px 4px 2px rgba(0,0,0,.30);
+        font-size: 0;
+        height: 52px;
+        margin-top: 10px;
+        position: relative;
+        width: 52px;
+
+        &:hover {
+            box-shadow: none;
+
+            &:before {
+                color: $clr-white;
+            }
+        }
+
+        &:before {
+            @include translateXY(-50%, -50%);
+            color: $clr-blue-01;
+            font-size: 20px;
+            height: 20px;
+            left: 50%;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+        }
+    }
+}
+
+.header__nav__list {
+    @include respond-to(screen-xs) {
+        display: none;
+    }
+}
+
+.header__nav__list__item {
+    color: $clr-blue-01;
+    font-family: $font-family-bold;
+    font-size: 15px;
+
+    &:hover {
+        color: $clr-blue-02;
+    }
+
+    + .header__nav__list__item {
+        margin-left: 60px;
+
+        @include respond-to(screen-sm) {
+            margin-left: 30px;
+        }
+    }
+}
+
+.header__nav__mobile {
+    background: $clr-white;
+    border-bottom: 5px solid $clr-teal;
+    border-top: 5px solid $clr-teal;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+
+    &--active {
+        @include animations(nav_opacity 0.2s ease forwards);
+    }
+}
+
+.header__nav__mobile__button {
+    border: 0;
+    padding: 0;
+
+    &:hover {
+        &:after {
+            color: $clr-blue-01;
+        }
+    }
+
+    &:after {
+        @include transition(color, 0.2s, ease);
+        color: $clr-teal;
+        font-size: 24px;
+        padding: 16px 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.header__nav__mobile__title {
+    color: $clr-blue-03;
+    font-family: $font-family-bold;
+    font-size: 18px;
+    padding: 20px 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header__nav__mobile__list__item {
+    @include transition(backgroundall, 0.2s, ease);
+    background: $clr-grey-02;
+    font-family: $font-family-semibold;
+    font-size: 18px;
+    height: 78px;
+    padding: 0 20px;
+
+    &:hover {
+        background: $clr-white;
+
+        .link {
+            color: $clr-teal;
+        }
+    }
+
+    + .header__nav__mobile__list__item {
+        margin-top: 2px;
+    }
+
+    .link {
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include transition(color, 0.2s, ease);
+        color: $clr-grey-03;
+        height: 100%;
+        
+        &:after {
+            color: $clr-teal;
+        }
+    }
+}
+
+@include keyframes(nav_opacity) {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,21 @@
+// ---------------------------------------
+// Core Breakpoints
+// ---------------------------------------
+
+@mixin respond-to($point) {
+    @if $point == screen-lg {
+        @media #{$screen-lg-breakpoint} { @content; }
+    }
+
+    @if $point == screen-md {
+        @media #{$screen-md-breakpoint} { @content; }
+    }
+
+    @if $point == screen-sm {
+        @media #{$screen-sm-breakpoint} { @content; }
+    }
+
+    @if $point == screen-xs {
+        @media #{$screen-xs-breakpoint} { @content; }
+    }
+}

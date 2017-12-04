@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pool Pros: Pools &amp; Spas of Charlotte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="icon">
+    <link rel="stylesheet" href="assets/fonts/ssPika/ss-pika.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="poolPros">
+        <!-- Overlay -->
+        <div id="overlay" class="overlay">
+            <div class="overlay__card">
+                <button id="overlay__button__close" class="button button--close ss-delete">Close</button>
+                <header class="overlay__header">
+                    <h1><span>Email</span>Premium Pools &amp; Spas of Charlotte</h1>
+                </header>
+                <main class="overlay__main">
+                    <p>Fill out the form below and Premium Pools &amp; Spas of Charlotte will get in touch.</p>
+                    <form class="overlay__form">
+                        <div class="overlay__form__wrap">
+                            <label class="overlay__form__label overlay__form__label--activate" for="fullname">First and last name</label>
+                            <input class="overlay__form__input" type="text" name="fullname">
+                        </div>
+                        <div class="overlay__form__wrap overlay__form__wrap--sm">
+                            <label class="overlay__form__label" for="phoneNumber">Phone number</label>
+                            <input class="overlay__form__input" type="number" name="phoneNumber">
+                        </div>
+                        <div class="overlay__form__wrap">
+                            <label class="overlay__form__label overlay__form__label--optional" for="email">Email address</label>
+                            <input class="overlay__form__input" type="text" name="email">
+                        </div>
+                        <div class="overlay__form__wrap">
+                            <label class="overlay__form__label overlay__form__label--optional" for="comments">Comments or questions</label>
+                            <textarea class="overlay__form__input overlay__form__input--textarea"  name="comments"></textarea>
+                        </div>
+                        <div class="overlay__form__wrap">
+                            <label class="overlay__form__label overlay__form__label--optional" for="bool">Do you currently own a pool or spa?</label>
+                            <div class="overlay__button__wrap">
+                                <button class="button button--active">Yes</button>
+                                <button class="button">No</button>
+                            </div>
+                        </div>
+                        <button class="overlay__form__submit button icon ss-navigateright right">Send my email</button>
+                    </form>
+                </main>
+                <footer class="overlay__footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac elit vitae libero consequat faucibus. Nunc efficitur, diam eget vehicula faucibus, sapien felis feugiat enim, sit amet feugiat odio nisi sit amet risus.</footer>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header__sub">
+                <nav class="wrapper header__sub__nav">
+                    <ul class="header__sub__nav__list">
+                        <li class="header__sub__nav__list__item">
+                            <a href="#" class="link">Dealers and Distributors</a>
+                        </li>
+                        <li class="header__sub__nav__list__item">
+                            <a href="#" class="link icon ss-action right">Commercial Service</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__main">
+                <div class="wrapper">
+                    <h1 class="header__logo"><a href="#" class="link">Pool Pros</a></h1>
+                    <nav class="header__nav">
+                        <ul class="header__nav__list">
+                            <li class="header__nav__list__item">
+                                <a href="#" class="link">Pools and Spas</a>
+                            </li>
+                            <li class="header__nav__list__item">
+                                <a href="#" class="link">Supplies</a>
+                            </li>
+                            <li class="header__nav__list__item">
+                                <a href="#" class="link">Resources</a>
+                            </li>
+                            <li class="header__nav__list__item">
+                                <a href="#" class="link">Services</a>
+                            </li>
+                        </ul>
+                        <button class="button icon header__nav__button ss-location">Find a <span>Pool</span> Pro</button>
+                        <button id="nav_mobile_btn" class="button icon header__nav__button header__nav__button--mobile ss-rows">Mobile Menu</button>
+                    </nav>
+                </div>
+            </div>
+            <nav id="nav_mobile" class="header__nav__mobile">
+                <button id="nav_mobile_close" class="button icon header__nav__mobile__button ss-delete right"></button>
+                <div class="header__nav__mobile__title">Menu</div>
+                <ul class="header__nav__mobile__list">
+                    <li class="header__nav__mobile__list__item">
+                        <a href="#" class="link icon ss-navigateright right">Pools &amp; Spas</a>
+                    </li>
+                    <li class="header__nav__mobile__list__item">
+                        <a href="#" class="link icon ss-navigateright right">Supplies</a>
+                    </li>
+                    <li class="header__nav__mobile__list__item">
+                        <a href="#" class="link icon ss-navigateright right">Resources</a>
+                    </li>
+                    <li class="header__nav__mobile__list__item">
+                        <a href="#" class="link icon ss-navigateright right">Services</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main class="main">
+            <section class="filter">
+                <div class="wrapper">
+                    <!-- Filter -->
+                    <div class="filter__action">
+                        <div class="filter__zip">7 Dealers in 28226</div>
+                        <form class="form__filter">
+                            <div id="filter_results_mobile" class="form__filter__tile">Filter Results <span class="icon ss-dropdown"></span></div>
+                            <div id="filter_results_show" class="form__filter__fieldset form__filter__fieldset--active">
+                                <div class="form__filter__wrapper">
+                                    <input type="checkbox" id="cb_service" name="service" value="service" class="form__filter__checkbox" checked>
+                                    <label class="form__filter__value" for="service">Service</label>
+                                </div>
+                                <div class="form__filter__wrapper">
+                                    <input type="checkbox" id="cb_installation" name="installation" value="installation" class="form__filter__checkbox">
+                                    <label class="form__filter__value" for="installation">Installation</label>
+                                </div>
+                                <div class="form__filter__wrapper">
+                                    <input type="checkbox" id="cb_residential" name="residential" value="residential" class="form__filter__checkbox">
+                                    <label class="form__filter__value" for="residential">Residential</label>
+                                </div>
+                                <div class="form__filter__wrapper">
+                                    <input type="checkbox" id="cb_commerical" name="commerical" value="commerical" class="form__filter__checkbox">
+                                    <label class="form__filter__value" for="commerical">Commerical</label>
+                                    <span class="form__tooltip">?</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Filter Content -->
+                    <div id="filter_content" class="filter__content"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__top">
+                <a href="#" class="link footer__logo">
+                    <img src="assets/imgs/pool-pros-logo-footer.png" alt="Pool Pros" width="188" />
+                </a>
+                <div class="footer__social">
+                    Connect with Us
+                    <ul class="footer__social__list">
+                        <li class="footer__social__list__item">
+                            <a href="#" class="link footer__social__list__item__link footer__social__list__item__link--twitter">Twitter</a>
+                        </li>
+                        <li class="footer__social__list__item">
+                            <a href="#" class="link footer__social__list__item__link footer__social__list__item__link--fb">Facebook</a>
+                        </li>
+                        <li class="footer__social__list__item">
+                            <a href="#" class="link footer__social__list__item__link footer__social__list__item__link--youtube">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__sub">
+                <ul class="footer__sub__list">
+                    <li class="footer__sub__list__item">
+                        <a href="#" class="link footer__sub__list__item__link">Dealers and Distributors</a>
+                    </li>
+                    <li class="footer__sub__list__item">
+                        <a href="#" class="link footer__sub__list__item__link icon ss-action right">Commercial Service</a>
+                    </li>
+                </ul>
+                <ul class="footer__sub__list">
+                    <li class="footer__sub__list__item">
+                        <a href="#" class="link footer__sub__list__item__link">&copy; 2017 Pool Pros</a>
+                    </li>
+                    <li class="footer__sub__list__item">
+                        <a href="#" class="link footer__sub__list__item__link">Privacy Policy</a>
+                    </li>
+                    <li class="footer__sub__list__item">
+                        <a href="#" class="link footer__sub__list__item__link">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="dealers.json"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
+</body>
+</html>

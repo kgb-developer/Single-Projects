@@ -1,0 +1,295 @@
+// --------------------------------------------------
+// Filter
+// --------------------------------------------------
+
+.filter .wrapper {
+    @include respond-to(screen-xs) {
+        padding: 0;
+    }
+}
+
+.filter__action {
+    @include align-items(center);
+    @include flexbox();
+    @include justify-content(center);
+    background: $clr-grey-02;
+    border-radius: 8px;
+    padding: 30px;
+
+    @include respond-to(screen-xs) {
+        @include align-items(flex-start);
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        border-radius: 0;
+        max-width: none;
+        padding: 30px 10px 15px;
+    }
+}
+
+.filter__zip,
+.form__filter__tile {
+    font-family: $font-family-bold;
+    font-size: 18px;
+
+    @include respond-to(screen-xs) {
+        font-size: 16px;
+    }
+}
+
+.filter__zip {
+    color: $clr-blue-02;
+    margin-right: 30px;
+    padding-right: 30px;
+    position: relative;
+    text-align: right;
+
+    &:after { 
+        @include translateY(-50%);
+        background: $clr-grey-01;
+        content: '';
+        height: 54px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 2px;
+    }
+
+    @include respond-to(screen-sm) {
+        margin-right: 20px;
+        padding-right: 20px;
+    }
+
+    @include respond-to(screen-xs) {
+        margin: 0;
+        padding: 0;
+
+        &:after { 
+            display: none;
+        }
+    }
+}
+
+.form__filter__tile {
+    @include transition(color, 0.6s, ease);
+    color: $clr-grey-04;
+
+    .icon {
+        display: none;
+    }
+
+    @include respond-to(screen-xs) {
+        background: $clr-white;
+        border: 1px solid $clr-grey-05;
+        margin-top: -35px;
+        padding-left: 12px;
+
+        &:hover {
+            color: $clr-blue-02;
+            cursor: pointer; 
+        }
+
+        .icon {
+            background: $clr-grey-02;
+            border-left: 1px solid $clr-grey-05;
+            display: inline-block;
+            margin-left: 8px;
+            padding: 12px 18px;
+            
+            &:before {
+                font-size: 10px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.form__filter,
+.form__filter__fieldset,
+.form__filter__wrapper {
+    @include align-items(center);
+    @include flexbox();
+}
+
+.form__filter {
+    margin: 0;
+
+    @include respond-to(screen-xs) {
+        @include align-items(flex-end);
+        @include flex-direction(column);
+        position: relative;
+        width: 100%;
+    }
+}
+
+.form__filter__fieldset {
+    @include respond-to(screen-xs) {
+        @include align-items(flex-start);
+        @include flex-direction(column);
+        @include transition(all, 0.6s, ease);
+        background: $clr-white;
+        border: 1px solid $clr-grey-05;
+        max-height: 0;
+        margin-top: -1px;
+        opacity: 0;
+        top: 14px;
+        visibility: hidden;
+        width: 100%;
+
+        &--active {
+            @include flexbox();
+            @include animations(filter_opacity 0.6s ease forwards);
+        }
+
+        &--inactive {
+            @include flexbox();
+            @include animations(filter_opacity_alt 0.2s ease forwards);
+        }
+        
+        .form__filter__wrapper {
+            margin: 0;
+            padding: 20px;
+        }
+    }
+}
+
+.form__filter__wrapper {
+    position: relative;
+    margin-left: 34px;
+
+    @include respond-to(screen-sm) {
+        margin-left: 18px;
+    }
+}
+
+.form__filter__value {
+    color: $clr-grey-04;
+    font-size: 12px;
+
+    @include respond-to(screen-xs) {
+        font-size: 16px;
+    }
+
+    + .form__tooltip {
+        margin-left: 8px;
+    }
+}
+
+.form__tooltip {
+    @include transition(background, 0.2s, ease);
+    background: $clr-grey-05;
+    border-radius: 4px;
+    color: $clr-blue-01;
+    font-family: $font-family-bold;
+    font-size: 10px;
+    padding: 4px 8px;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+        background: $clr-blue-01;
+        color: $clr-white;
+        cursor: pointer;
+    }
+}
+
+.form__filter__checkbox {
+    height: 100%;
+    opacity: 0;
+    position: absolute; 
+    width: 100%;
+    z-index: 1;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    + label {
+        @include align-items(center);
+        @include flexbox();
+        padding: 0;
+        position: relative;
+    }
+
+    + label:before {
+        @include transition(all, 0.2s, ease);
+        background: $clr-white;
+        border: 1px solid $clr-grey-05;
+        border-radius: 4px;
+        content: '';
+        display: inline-block;
+        height: 24px;
+        margin-right: 10px;
+        vertical-align: text-top;
+        width: 24px;
+    }
+
+    &:hover + label:before,
+    &:checked + label:before {
+        background: $clr-blue-02;
+        border-color: $clr-blue-02;
+    }
+
+    &:checked + label:after {
+        @include translateXY(-50%, -50%);
+        background: $clr-white;
+        border-radius: 2px;
+        content: '';
+        height: 8px;
+        left: 13px;
+        position: absolute;
+        top: 13px;
+        width: 8px;
+    }
+}
+
+.filter__content {
+    @include align-items(flex-start);
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(flex-start);
+    margin: 0 -8px;
+    padding: 30px 0 60px;
+
+    @include respond-to(screen-sm) {
+        @include flex-direction(column);
+        @include justify-content(center);
+        margin: 0;
+    }
+
+    @include respond-to(screen-xs) {
+        @include flex-direction(column);
+        @include justify-content(center);
+        border-top: 1px solid $clr-grey-05;
+        padding: 0 0 30px;
+        margin: 0;
+    }
+}
+
+@include keyframes(filter_opacity) {
+    0% {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    30% {
+        max-height: 300px;
+    }
+    100% {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@include keyframes(filter_opacity_alt) {
+    0% {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
