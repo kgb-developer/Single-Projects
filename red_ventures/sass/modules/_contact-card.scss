@@ -3,46 +3,22 @@
 // --------------------------------------------------
 
 .contact__card {
-    @include flex(1 0 auto);
-    background: $clr-white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px 1px rgba(0,0,0,.25);
-    margin-bottom: 30px;
-    margin-left: 8px;
-    margin-right: 8px;
-    max-width: 414px;
-    max-height: 465px;
-    overflow: hidden;
-    text-align: center;
-    width: 414px;
+    @include flexbox();
+    display: flex;
+    padding: 14px;
+    width: calc(33.33% - 30px);
 
     @include respond-to(screen-md) {
-        max-width: none;
-        width: 33%;
+        width: calc(50% - 30px);
     }
 
     @include respond-to(screen-sm) {
-        @include flex(none);
-        margin: 0 auto 30px;
+        width: calc(50% - 30px);
     }
 
     @include respond-to(screen-xs) {
-        border-radius: 0;
-        box-shadow: 0 2px 4px 1px rgba(0,0,0,.1);
-        margin: 0 auto;
-        max-width: none;
-        width: 95%;
-    }
-
-    + .contact__card {
-        @include respond-to(screen-sm) {
-            margin: 30px auto 0;
-        }
-    
-        @include respond-to(screen-xs) {
-            border-radius: 0;
-            margin: 6px auto 0;
-        }
+        padding: 4px 14px;
+        width: 100%;
     }
 
     h2 {
@@ -52,6 +28,7 @@
         font-size: 26px;
         margin: 0 10px;
         padding: 30px 0;
+        text-align: center;
 
         @include respond-to(screen-xs) {
             font-size: 20px;
@@ -70,8 +47,24 @@
     }
 }
 
+.contact__card__wrap {
+    @include flexbox();
+    @include flex-direction(column);
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,.25);
+    width: 100%;
+}
+
+.contact__card__content {
+    @include flex(1 0 auto);
+    @include flex-direction(column);
+    padding: 30px 14px 0;
+    text-align: center;
+}
+
 .contact__card__phone {
-    padding: 32px 10px 20px;
+    padding: 0 10px 20px;
 
     a {
         @include align-items(center);

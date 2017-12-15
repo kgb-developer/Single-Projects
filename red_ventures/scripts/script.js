@@ -87,27 +87,31 @@
 
             card_template = _.template(
                 '<div id="<%= data.companyID %>" class="contact__card">' +
-                    '<h2><%= data.name %></h2>' +
-                    '<div class="contact__card__phone">' +
-                        '<a href="tel:<%= data.phone1 %>" class="link icon ss-phone"><span>' + CONST_TAP_TO_CALL + '</span><%= data.phone1 %></a>' +
-                        '<span>' + CONST_CANT_TALK + '</span>' +
-                    '</div>' +
-                    '<a class="button" href="mailto:<%= data.email %>?Subject=Pool%20Pros%20Inquiry">' + CONST_CONTACT_PRO + '</a>' +
-                    '<div class="contact__card__hours">' +
-                        '<div class="contact__card__hours__title">' + CONST_BUSINESS_HRS + '</div>' +
-                        '<ul class="contact__card__hours__list">' +
-                            '<li class="contact__card__hours__list__item">' + CONST_WEEKDAYS + CONST_SPACE + '<%= data.weekHours.mon %></li>' +
-                            '<li class="contact__card__hours__list__item">' + CONST_SATURDAYS + CONST_SPACE + '<%= data.weekHours.sat %></li>' +
-                            '<li class="contact__card__hours__list__item">' + CONST_SUNDAYS + CONST_SPACE + '<%= data.weekHours.sun %></li>' +
-                        '</ul>' +
-                    '</div>' +
-                    '<div class="contact__card__services">' +
-                        '<ul class="contact__card__services__list">' +
-                            '<li class="contact__card__services__list__item icon"><%= data.certifications[0] %></li>' +
-                            '<li class="contact__card__services__list__item icon"><%= data.certifications[1] %></li>' +
-                            '<li class="contact__card__services__list__item icon"><%= data.certifications[2] %></li>' +
-                            '<li class="contact__card__services__list__item icon"><%= data.certifications[3] %></li>' +
-                        '</ul>' +
+                    '<div class="contact__card__wrap">' +
+                        '<h2><%= data.name %></h2>' +
+                        '<div class="contact__card__content">' +
+                            '<div class="contact__card__phone">' +
+                                '<a href="tel:<%= data.phone1 %>" class="link icon ss-phone"><span>' + CONST_TAP_TO_CALL + '</span><%= data.phone1 %></a>' +
+                                '<span>' + CONST_CANT_TALK + '</span>' +
+                            '</div>' +
+                            '<a class="button" href="mailto:<%= data.email %>?Subject=Pool%20Pros%20Inquiry">' + CONST_CONTACT_PRO + '</a>' +
+                            '<div class="contact__card__hours">' +
+                                '<div class="contact__card__hours__title">' + CONST_BUSINESS_HRS + '</div>' +
+                                '<ul class="contact__card__hours__list">' +
+                                    '<li class="contact__card__hours__list__item">' + CONST_WEEKDAYS + CONST_SPACE + '<%= data.weekHours.mon %></li>' +
+                                    '<li class="contact__card__hours__list__item">' + CONST_SATURDAYS + CONST_SPACE + '<%= data.weekHours.sat %></li>' +
+                                    '<li class="contact__card__hours__list__item">' + CONST_SUNDAYS + CONST_SPACE + '<%= data.weekHours.sun %></li>' +
+                                '</ul>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="contact__card__services">' +
+                            '<ul class="contact__card__services__list">' +
+                                '<li class="contact__card__services__list__item icon"><%= data.certifications[0] %></li>' +
+                                '<li class="contact__card__services__list__item icon"><%= data.certifications[1] %></li>' +
+                                '<li class="contact__card__services__list__item icon"><%= data.certifications[2] %></li>' +
+                                '<li class="contact__card__services__list__item icon"><%= data.certifications[3] %></li>' +
+                            '</ul>' +
+                        '</div>' +
                     '</div>' +
                 '</div>'
             );
